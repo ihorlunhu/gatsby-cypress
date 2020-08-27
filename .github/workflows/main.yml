@@ -9,5 +9,9 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
+          # Linux and MacOS
+          start: yarn start
+          # Takes precedences on Windows
+          start-windows: npm run start:windows:server
           wait-on: http://localhost:8000
           spec: cypress/integration/home-page.js
