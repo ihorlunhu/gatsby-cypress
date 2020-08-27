@@ -17,4 +17,5 @@ jobs:
           # wait for 2 minutes for the server to respond
           wait-on-timeout: 120
           browser: chrome
+          headless: true
           spec: cypress/integration/home-page.js
