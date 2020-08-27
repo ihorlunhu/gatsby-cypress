@@ -1,4 +1,4 @@
-name: test11
+name: test12
 on: [push]
 jobs:
   cypress-run:
@@ -13,7 +13,8 @@ jobs:
           start: yarn start
           # Takes precedences on Windows
           start-windows: npm run start:windows:server
-          wait-on: 'http://127.0.0.1:9001'
+          wait-on: 'http://localhost:8000'
           # wait for 2 minutes for the server to respond
           wait-on-timeout: 120
+          browser: chrome
           spec: cypress/integration/home-page.js
