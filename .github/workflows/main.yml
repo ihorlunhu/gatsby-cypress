@@ -13,6 +13,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm run test:e2e:ci 
+      - run: yarn
+      - run: yarn test:e2e:ci 
         env:
           CI: true
