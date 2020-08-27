@@ -13,5 +13,7 @@ jobs:
           start: yarn start
           # Takes precedences on Windows
           start-windows: npm run start:windows:server
-          wait-on: http://localhost:8000
+          wait-on: 'http://127.0.0.1:8000'
+          # wait for 2 minutes for the server to respond
+          wait-on-timeout: 120
           spec: cypress/integration/home-page.js
